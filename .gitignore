@@ -1,0 +1,35 @@
+# Python virtual environment
+venv/
+live-mic/venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.so
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Audio files (recordings, responses)
+*.wav
+*.mp3
+
+# Whisper model files (they're big and user-specific)
+whisper.cpp/models/
+*.bin
+
+# Log files and temporary output
+*.log
+*.tmp
+
+# VS Code settings (optional, for cleanliness)
+.vscode/
+
+# Node/NPM (if you add a frontend)
+node_modules/
+dist/
+build/
+
+# Ignore the embedded git repo (do not track whisper.cpp directly)
+whisper.cpp/

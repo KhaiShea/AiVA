@@ -33,3 +33,6 @@ build/
 
 # Ignore the embedded git repo (do not track whisper.cpp directly)
 whisper.cpp/
+
+# Ignore the chat log file
+chat_log.txt

@@ -1,6 +1,7 @@
 from whisper_mic import transcribe_from_mic
-from llm import ask_ai
 from speak import say
+from llm import ask_ai
+from memory import log_message
 
 def main():
     print("🤖 Hi! I'm AiVA — your voice assistant.")
@@ -12,14 +13,17 @@ def main():
             print("🤷 I didn’t catch that. Try again.")
             continue
 
-        user_input = user_input.strip().lower()
-        if user_input in ['quit', 'exit']:
-            print("👋 Goodbye!")
+        print("👂 You said:", user_input)
+        if user_input.lower() in ["exit", "quit"]:
             break
 
-        print(f"👂 You said: {user_input}")
+        log_message("user", user_input)
+
         response = ask_ai(user_input)
-        print(f"🧠 AiVA: {response}")
+        print("🧠 AiVA:", response)
+
+        log_message("ai", response)
+
         say(response)
 
 if __name__ == "__main__":

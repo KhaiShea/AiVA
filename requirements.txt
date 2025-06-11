@@ -1,0 +1,4 @@
+sounddevice
+scipy
+requests
+edge-tts
